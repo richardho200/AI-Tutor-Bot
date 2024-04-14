@@ -1,6 +1,7 @@
 # AI-Tutor-Bot
 Capstone Research Project-Advised by Dr. Leilani Gilpin University of California, Santa Cruz(Winter 2024-Spring 2024 Quarter)
 
+CSE 240 Tutorial Bot 
 Winter 2024 Program: APIRequest.py Python file
 
 There are 2 models been examined in the OpenAI's API versions during the experiment of examining these 5 sample questions during the Winter 2024 quarter: "gpt-3.5-turbo" and "gpt-4-turbo-preview"
@@ -18,8 +19,6 @@ of API models.
 
 If you using Question 2 to experiment the API, Comment all questions which are commented below to have the best performance 
 Comment the system role to make program make different answers than original chatGPT answers uncommenting this will have same answers as ChatGPT answers
-
-CSE 240 Tutorial Bot 
 
 From using the text generation from OpenAi api, the original code reference link:https://platform.openai.com/docs/guides/text-generation/chat-completions-api
 
