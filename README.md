@@ -20,6 +20,8 @@ of API models.
 If you using Question 2 to experiment the API, Comment all questions which are commented below to have the best performance 
 Comment the system role to make program make different answers than original chatGPT answers uncommenting this will have same answers as ChatGPT answers
 
+Turtorial of running my Code
+
 From using the text generation from OpenAi api, the original code reference link:https://platform.openai.com/docs/guides/text-generation/chat-completions-api
 
 {Role: “user”}-- user asking the API from OpenAI on related CSE 240’s material content
