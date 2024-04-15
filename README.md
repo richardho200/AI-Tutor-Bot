@@ -1,7 +1,7 @@
-# AI-Tutor-Bot
+# CSE 240 Tutorial Bot 
 Capstone Research Project-Advised by Dr. Leilani Gilpin University of California, Santa Cruz(Winter 2024-Spring 2024 Quarter)
 
-CSE 240 Tutorial Bot 
+
 Winter 2024 Program: APIRequest.py Python file
 
 There are 2 models been examined in the OpenAI's API versions during the experiment of examining these 5 sample questions during the Winter 2024 quarter: "gpt-3.5-turbo" and "gpt-4-turbo-preview"
