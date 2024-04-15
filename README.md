@@ -10,9 +10,10 @@ How to run this file:
 There are five CSE 240 questions in the context of every user's role because we are asking the OpenAI's API to evaluate their answers. 
 
 For instance question 1 is commented for reference on using respective question on conducting mutiple trials in my experiment,
+```python
 #Question 1
  {"role": "user", "content": "When is DFS better than BFS search?"},
-
+```
 In order to run this program with accurate results, comment all of the unused questions first. Then begin running the program to have 
 accurate results. After using one question(Question 1) for experiment, uncomment Question 2 user and assistant role to begin the the trial
 of API models.
@@ -25,13 +26,14 @@ Turtorial of running my Code
 From using the text generation from OpenAi api, the original code reference link:https://platform.openai.com/docs/guides/text-generation/chat-completions-api
 
 {Role: “user”}-- user asking the API from OpenAI on related CSE 240’s material content
-This is an example from Question 1 from the CSE 240 material
+This is an example from Question 1 from the CSE 240 material:
+```python
 {"role": "user", "content": "When is DFS better than BFS search?"}
-
+```
 {Role: “assistant”}--ChatGPT Answer as an example to analyze the programs output from question 1
-
+```python
 {"role": "assistant", "content": "Depth-First Search (DFS) and Breadth-First Search (BFS) are two fundamental algorithms used in graph traversal. The choice between DFS and BFS depends on the specific characteristics of the problem and the requirements of the application. Here are some situations where DFS might be preferred over BFS: Memory Efficiency:  DFS is generally more memory-efficient than BFS. In DFS, you only need to keep track of the nodes along the current path from the root to the current node, while in BFS, you need to store all nodes at the current depth in a queue. If memory is a critical factor, and the depth of the tree/graph is large, DFS may be a better choice. Pathfinding to a Solution:If the goal is to find any solution or path from the start node to the goal node, DFS might be more suitable. DFS tends to go deep into the search space quickly, which can lead to finding a solution faster if the goal is located deep in the tree/graph.Space Complexity:In some cases, DFS has a lower space complexity than BFS, especially when the tree/graph is sparse. This is because DFS doesn't require maintaining a separate data structure to store all nodes at the current depth.Topological Sorting:DFS is often used for topological sorting of directed acyclic graphs (DAGs). It can efficiently find a topological ordering of the nodes, which is useful in scheduling and task dependency problems.It's important to note that the choice between DFS and BFS depends on the specific requirements of the problem at hand. BFS is generally better for finding the shortest path in an unweighted graph and guarantees the shortest path in terms of the number of edges. In contrast, DFS may find a path faster but doesn't guarantee optimality in terms of the number of edges."}
-
+```
 Program Output will produce their simplified OpenAI’s API answer to vertify with their ChatGPT answers for the assistant role respectively. For instance, this is the output from the API on answering question 1 below.
 
 In summary, DFS may be better than BFS when memory efficiency is critical, when finding any solution or path is sufficient, when space complexity is a concern, for topological sorting of DAGs, and when the goal is located deep in the search space.
