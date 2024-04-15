@@ -11,7 +11,7 @@ There are five CSE 240 questions in the context of every user's role because we 
 
 For instance question 1 is commented for reference on using respective question on conducting mutiple trials in my experiment,
 #Question 1
-{"role": "user", "content": "When is DFS better than BFS search?"}
+ {"role": "user", "content": "When is DFS better than BFS search?"},
 
 In order to run this program with accurate results, comment all of the unused questions first. Then begin running the program to have 
 accurate results. After using one question(Question 1) for experiment, uncomment Question 2 user and assistant role to begin the the trial
