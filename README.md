@@ -37,8 +37,9 @@ This is an example from Question 1 from the CSE 240 material:
 ```
 Program Output will produce their simplified OpenAI’s API answer to vertify with their ChatGPT answers for the assistant role respectively. For instance, this is the output from the API on answering question 1 below.
 
+```
 In summary, DFS may be better than BFS when memory efficiency is critical, when finding any solution or path is sufficient, when space complexity is a concern, for topological sorting of DAGs, and when the goal is located deep in the search space.
-
+```
 In order to confirm the logic between ChatGPT 3.5 and Openai’s API 3.5 for respective questions, create a user role, which is human asking the API, to generate a generated AI Prolog code below for analysis of AI’s logical reasoning behind their answer. Typically placed this code after both the user and assistant role for respective question.
 
 ```python
