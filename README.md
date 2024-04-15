@@ -36,9 +36,42 @@ Program Output will produce their simplified OpenAI’s API answer to vertify wi
 
 In summary, DFS may be better than BFS when memory efficiency is critical, when finding any solution or path is sufficient, when space complexity is a concern, for topological sorting of DAGs, and when the goal is located deep in the search space.
 
-In order to confirm the logic between ChatGPT 3.5 and Openai’s API 3.5 for respective questions, create a user role, which is human asking the API, to generate a generated AI Prolog code below for analysis of AI’s logical reasoning behind their answer.
+In order to confirm the logic between ChatGPT 3.5 and Openai’s API 3.5 for respective questions, create a user role, which is human asking the API, to generate a generated AI Prolog code below for analysis of AI’s logical reasoning behind their answer. Typically placed this code after both the user and assistant role for respective question.
 
 {"role": "user", "content": "Can you translate this response into prolog?"},
+
+The output of the program prints out the Prolog code to vertify their logical reasoning for question 1, for instance, of the API below:
+
+Here is how the explanation can be translated into Prolog:
+
+```prolog
+% Define rules for determining when DFS is better than BFS
+
+% Case 1: Memory efficiency
+dfs_better(MemoryEfficiency) :-
+    MemoryEfficiency = 'DFS is more memory-efficient than BFS'.
+
+% Case 2: Pathfinding to a solution
+dfs_better(Pathfinding) :-
+    Pathfinding = 'DFS is more suitable for finding any solution or path from start node to goal node'.
+
+% Case 3: Space complexity
+dfs_better(SpaceComplexity) :-
+    SpaceComplexity = 'DFS has lower space complexity than BFS in sparse trees/graphs'.
+
+% Case 4: Topological sorting
+dfs_better(TopologicalSorting) :-
+    TopologicalSorting = 'DFS is used for topological sorting of directed acyclic graphs'.
+
+% Define a rule for determining when DFS is better than BFS
+dfs_better_than_bfs :-
+    dfs_better(_).
+
+% Query the rule to get the output
+?- dfs_better_than_bfs.
+```
+
+This Prolog code defines rules for determining when DFS is better than BFS based on different criteria. The `dfs_better_than_bfs` rule can be queried to check when DFS is preferred over BFS according to the specified criteria.
 
 Then you need to comment out the previous question been utilized and proceed with the proceeding question thereafter with my experiment. 
 Prolog was utilized to confirm the logic between these two AI models for checking the rules from their answers. For instance, they had generated rules for both ChatGPT and OpenAI’s API to analyze logical reasoning behind their answers in their program. 
