@@ -2,11 +2,11 @@
 Capstone Research Project-Advised by Dr. Leilani Gilpin University of California, Santa Cruz(Winter 2024-Spring 2024 Quarter)
 
 
-Winter 2024 Program: APIRequest.py Python file
+## Winter 2024 Program: APIRequest.py Python file
 
 There are 2 models been examined in the OpenAI's API versions during the experiment of examining these 5 sample questions during the Winter 2024 quarter: "gpt-3.5-turbo" and "gpt-4-turbo-preview"
 
-How to run this file:
+### How to run this file:
 There are five CSE 240 questions in the context of every user's role because we are asking the OpenAI's API to evaluate their answers. 
 
 For instance question 1 is commented for reference on using respective question on conducting mutiple trials in my experiment,
@@ -21,7 +21,7 @@ of API models.
 If you using Question 2 to experiment the API, Comment all questions which are commented below to have the best performance 
 Comment the system role to make program make different answers than original chatGPT answers uncommenting this will have same answers as ChatGPT answers
 
-Turtorial of running my Code
+### Turtorial of running my Code
 
 From using the text generation from OpenAi api, the original code reference link:https://platform.openai.com/docs/guides/text-generation/chat-completions-api
 
