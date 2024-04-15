@@ -38,6 +38,7 @@ In summary, DFS may be better than BFS when memory efficiency is critical, when 
 
 In order to confirm the logic between ChatGPT 3.5 and Openai’s API 3.5 for respective questions, create a user role, which is human asking the API, to generate a generated AI Prolog code below for analysis of AI’s logical reasoning behind their answer. Typically placed this code after both the user and assistant role for respective question.
 
+'''python
 {"role": "user", "content": "Can you translate this response into prolog?"},
 
 The output of the program prints out the Prolog code to vertify their logical reasoning for question 1, for instance, of the API below:
