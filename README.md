@@ -177,5 +177,5 @@ results = rouge.compute(predictions=predictionsq5a9, references=referencesq5a10)
 print(results)
 ```
 
-#Research Findings of the CSE 240 bot
+# Research Findings of the CSE 240 bot
 For more information about my research, please refer to the Master Capstone Project.pdf on my research findings. 
