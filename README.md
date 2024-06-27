@@ -1,7 +1,6 @@
 # CSE 240 Tutorial Bot 
 Capstone Research Project-Advised by Dr. Leilani Gilpin University of California, Santa Cruz(Winter 2024-Spring 2024 Quarter)
 
-
 ## Winter 2024 Program: APIRequest.py Python file
 
 There are 2 models been examined in the OpenAI's API versions during the experiment of examining these 5 sample questions during the Winter 2024 quarter: "gpt-3.5-turbo" and "gpt-4-turbo-preview"
@@ -99,4 +98,84 @@ This Prolog code defines rules for determining when DFS is better than BFS based
 Then you need to comment out the previous question been utilized and proceed with the proceeding question thereafter with my experiment. 
 Prolog was utilized to confirm the logic between these two AI models for checking the rules from their answers. For instance, they had generated rules for both ChatGPT and OpenAI’s API to analyze logical reasoning behind their answers in their program. 
 
+## Spring 2024 Quarter: ROUGE and BLEU Scores
+During this quarter, I had utilized ROUGE and BLEU scores to verify hypotheses of narrative similarity for my respective LLM models. The first set of experiments was to have the prediction sentence begin at the 2nd trial and reference sentence begin at the first trial respectively for my API trials. The second set of experiments was the reverse; starting from the first set of experiments.
 
+# BLEU Score.py Python file
+This Python programming file allows to analyze prediction and reference sentences to calculate the BLEU score to vertify hypthesis of narrative similiarity for my LLM models. In order to run this program, you need to label the sample sentences for respective roles for prediction and reference sentences to calculate BLEU scores below. The following examples for both prediction and references sentences will be given to summarize my experiment for my Master's Capstone Research project similiar to calculation of ROUGE scores. 
+```
+referencesq5a10=["""In summary, the main reasons for using max(h1, h2) rather than either h1 or h2 alone as the heuristic evaluation function in A* search are:
+1. Admissibility: By taking the maximum of two admissible heuristics, the combined heuristic remains admissible.
+2. Dominance: The maximum heuristic allows for capturing the strengths of both heuristics by considering the most optimistic estimate at each state.
+3. Balance: It strikes a balance between the two heuristics, ensuring that the heuristic function is not overly optimistic or pessimistic.
+4. Improved Guidance: The maximum heuristic guides the search more effectively by incorporating the advantages of both heuristics in different situations.
+Overall, using max(h1, h2) can lead to a more informed and efficient search process in A* search algorithm.
+""","Overall, using"]
+
+predictionsq5a9=["""In the context of A* search, using the maximum of two admissible heuristics (max(h1, h2)) as the heuristic evaluation function is preferred over using either h1 or h2 alone because it can provide a better estimate of the true cost to reach the goal.
+
+Here are a few reasons why using the maximum heuristic can be beneficial:
+
+1. Improved accuracy: By taking the maximum of two admissible heuristics, the resulting heuristic value is guaranteed to be at least as good as the better of the two individual heuristics. This can lead to more accurate estimates of the cost to reach the goal, as the maximum heuristic is more likely to capture the true cost in a wider range of states.
+
+2. Handling uncertainty: Different heuristics may perform better in different parts of the search space or under different conditions. By combining them using the maximum function, the resulting heuristic can adapt to the strengths and weaknesses of each individual heuristic. This can help in handling uncertainty and variability in the search process.
+
+3. Avoiding underestimation: Using the maximum of two admissible heuristics helps in avoiding underestimation of the true cost. If one heuristic underestimates the cost in certain states, the other heuristic can compensate for this by providing a more accurate estimate. This can prevent the search algorithm from expanding unnecessary nodes and potentially reaching suboptimal solutions.
+
+4. Ensuring admissibility: If both h1 and h2 are admissible heuristics, then max(h1, h2) will also be admissible. This property is important in A* search, as it guarantees that the search algorithm will always find an optimal solution if one exists.
+
+Overall, using the maximum of two admissible heuristics as the heuristic evaluation function in A* search can lead to more accurate and robust search performance. It allows for the benefits of multiple heuristics to be combined effectively, improving the quality of the heuristic guidance provided to the search algorithm.
+""",["Overall, using"]]
+```
+This code calculates the both reference and prediction sentences for the BLEU scores in my research. 
+```
+# Load the BLEU evaluation metric
+bleu = evaluate.load("bleu")
+
+# Compute the BLEU score
+results = bleu.compute(predictions=predictionsq5a9, references=referencesq5a10)
+
+# Print the results
+print(results)
+```
+# ROUGE Score.py Python file
+Similiar to the BLEU score instructions above, we are now using prediction and reference sentences to calculate the narrative similiarity for AI model with ROUGE method in Python. The given examples for prediction and reference will be referenced below. 
+```
+referencesq5a10=["""In summary, the main reasons for using max(h1, h2) rather than either h1 or h2 alone as the heuristic evaluation function in A* search are:
+1. Admissibility: By taking the maximum of two admissible heuristics, the combined heuristic remains admissible.
+2. Dominance: The maximum heuristic allows for capturing the strengths of both heuristics by considering the most optimistic estimate at each state.
+3. Balance: It strikes a balance between the two heuristics, ensuring that the heuristic function is not overly optimistic or pessimistic.
+4. Improved Guidance: The maximum heuristic guides the search more effectively by incorporating the advantages of both heuristics in different situations.
+Overall, using max(h1, h2) can lead to a more informed and efficient search process in A* search algorithm.
+""","Overall, using"]
+
+referencesq5a9=["""In the context of A* search, using the maximum of two admissible heuristics (max(h1, h2)) as the heuristic evaluation function is preferred over using either h1 or h2 alone because it can provide a better estimate of the true cost to reach the goal.
+
+Here are a few reasons why using the maximum heuristic can be beneficial:
+
+1. Improved accuracy: By taking the maximum of two admissible heuristics, the resulting heuristic value is guaranteed to be at least as good as the better of the two individual heuristics. This can lead to more accurate estimates of the cost to reach the goal, as the maximum heuristic is more likely to capture the true cost in a wider range of states.
+
+2. Handling uncertainty: Different heuristics may perform better in different parts of the search space or under different conditions. By combining them using the maximum function, the resulting heuristic can adapt to the strengths and weaknesses of each individual heuristic. This can help in handling uncertainty and variability in the search process.
+
+3. Avoiding underestimation: Using the maximum of two admissible heuristics helps in avoiding underestimation of the true cost. If one heuristic underestimates the cost in certain states, the other heuristic can compensate for this by providing a more accurate estimate. This can prevent the search algorithm from expanding unnecessary nodes and potentially reaching suboptimal solutions.
+
+4. Ensuring admissibility: If both h1 and h2 are admissible heuristics, then max(h1, h2) will also be admissible. This property is important in A* search, as it guarantees that the search algorithm will always find an optimal solution if one exists.
+
+Overall, using the maximum of two admissible heuristics as the heuristic evaluation function in A* search can lead to more accurate and robust search performance. It allows for the benefits of multiple heuristics to be combined effectively, improving the quality of the heuristic guidance provided to the search algorithm.
+""",["Overall, using"]]
+```
+This code calculates the both reference and prediction sentences for the ROGUE scores in my research below. 
+```
+# Load the ROUGE evaluation metric
+rouge = evaluate.load('rouge')
+
+
+# Compute the ROUGE score
+results = rouge.compute(predictions=predictionsq5a9, references=referencesq5a10)
+
+# Print the results
+print(results)
+```
+
+#Research Findings of the CSE 240 bot
+For more information about my research, please refer to the Master Capstone Project.pdf on my research findings. 
